@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Video Background Example</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #eee;
+    }
+
+    .video-bg {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-bg > video {
+        display: block;
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+</style>
+</head>
+<body>
+    <div class="video-bg">
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            poster="http://media.w3.org/2010/05/video/poster.png"
+        >
+            <source src="http://media.w3.org/2010/05/video/movie_300.mp4" type="video/mp4" />
+        </video>
+        <h1>Video Background Example</h1>
+    </div>
+    <h2>Heading 2</h2>
+    <p>Some text</p>
+</body>
+</html>
